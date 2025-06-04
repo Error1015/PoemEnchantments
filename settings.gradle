@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            name = 'MinecraftForge'
+            url = 'https://maven.minecraftforge.net/'
+        }
+
+        maven { url = 'https://maven.parchmentmc.org' }
+    }
+}
+
+rootProject.name = 'poem_enchantment-1-20-1'
