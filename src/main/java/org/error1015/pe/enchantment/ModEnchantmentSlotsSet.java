@@ -1,14 +1,8 @@
 package org.error1015.pe.enchantment;
 
-import lombok.Getter;
 import net.minecraft.world.entity.EquipmentSlot;
 
-public enum ModEnchantmentSlotsSet {
-    ARMORS(EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET);
-
-    @Getter private final EquipmentSlot[] slots;
-
-    ModEnchantmentSlotsSet(EquipmentSlot... slots) {
-        this.slots = slots;
-    }
+public class ModEnchantmentSlotsSet {
+    public static final EquipmentSlot[] ARMORS = new EquipmentSlot[]{EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
+    public static final EquipmentSlot[] HANDS = new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND};
 }

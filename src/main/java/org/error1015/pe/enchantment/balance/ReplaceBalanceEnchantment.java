@@ -6,7 +6,7 @@ import org.error1015.pe.enchantment.ModEnchantmentSlotsSet;
 
 public class ReplaceBalanceEnchantment extends Enchantment {
     public ReplaceBalanceEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentCategory.ARMOR, ModEnchantmentSlotsSet.ARMORS.getSlots());
+        super(Rarity.UNCOMMON, EnchantmentCategory.ARMOR, ModEnchantmentSlotsSet.ARMORS);
     }
 
     @Override

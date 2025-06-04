@@ -11,4 +11,6 @@ public class PEEffects {
     public static final DeferredRegister<MobEffect> REGISTRAR = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, PoemEnchantment.MODID);
 
     public static final RegistryObject<MobEffect> REPLACE_BALANCE_EFFECT = REGISTRAR.register("replace_balance_effect", ReplaceBalanceEffect::new);
+
+    private PEEffects() {}
 }

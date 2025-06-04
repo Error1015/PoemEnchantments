@@ -15,4 +15,6 @@ public class ModEnchantments {
     public static final RegistryObject<Enchantment> REPLACE_BALANCE = REGISTRAR.register("replace_balance", ReplaceBalanceEnchantment::new);
     public static final RegistryObject<Enchantment> EQUILIBRIUM_BALANCE = REGISTRAR.register("equilibrium_balance", EquilibriumBalanceEnchantment::new);
     public static final RegistryObject<Enchantment> VICTORY_BALANCE = REGISTRAR.register("victory_balance", VictoryBalanceEnchantment::new);
+
+    private ModEnchantments() {}
 }

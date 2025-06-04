@@ -84,11 +84,19 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     mavenCentral()
     mavenLocal()
+
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     compileOnly "org.projectlombok:lombok:1.18.38"
+
+    compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_api_version}:api")
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_api_version}"))
 //    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }
