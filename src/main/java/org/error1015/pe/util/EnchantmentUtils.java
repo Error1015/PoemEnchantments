@@ -5,6 +5,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 public class EnchantmentUtils {
+    private EnchantmentUtils() {}
+
     /**
      * 获取实体全身装备中某附魔最大等级
      */

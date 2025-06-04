@@ -5,6 +5,8 @@ import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 public class CuriosUtil {
+    private CuriosUtil() {}
+    
     /**
      * 如果物品是ICurioItem的对象或者tag中包含curios的命名空间则为true
      */
