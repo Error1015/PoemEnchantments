@@ -24,6 +24,7 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
         addKeys();
         addEnchantment(ModEnchantments.REPLACE_BALANCE, "置换天平");
         addEnchantment(ModEnchantments.EQUILIBRIUM_BALANCE, "平衡天平");
+        addEnchantment(ModEnchantments.VICTORY_BALANCE,"胜利天平");
     }
 
     public void addKeys() {

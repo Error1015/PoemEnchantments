@@ -25,6 +25,7 @@ public final class ModEnUsLanguageProvider extends LanguageProvider {
         addKeys();
         addEnchantment(ModEnchantments.REPLACE_BALANCE, "Replace Balance");
         addEnchantment(ModEnchantments.EQUILIBRIUM_BALANCE, "Equilibrium Balance");
+        addEnchantment(ModEnchantments.VICTORY_BALANCE,"Victory Balance");
     }
 
     public void addKeys() {
