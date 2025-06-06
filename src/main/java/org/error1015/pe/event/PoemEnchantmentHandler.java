@@ -1,6 +1,7 @@
 package org.error1015.pe.event;
 
 import lombok.val;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,9 +30,9 @@ public class PoemEnchantmentHandler {
     @SubscribeEvent
     public static void doEquilibriumBalanceEvent(LivingDamageEvent event) {
         if (event.getEntity().level().isClientSide) return;
-        val attacker = event.getSource().getEntity();
-        if (attacker == null) return;
-        int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
+        if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+            int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
+        }
     }
 
 }
