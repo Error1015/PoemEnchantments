@@ -14,6 +14,7 @@ public class ReplaceBalanceEffect extends MobEffect {
     @Override
     public void applyEffectTick(@NotNull LivingEntity living, int amplifier) {
         if (living.level().isClientSide) return;
+        // TODO
         super.applyEffectTick(living, amplifier);
     }
 }

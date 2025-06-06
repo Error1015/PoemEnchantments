@@ -1,9 +1,13 @@
 package org.error1015.pe.util;
 
+import lombok.val;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.items.IItemHandlerModifiable;
+import org.jetbrains.annotations.Nullable;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 
 public final class CuriosUtil {
     private CuriosUtil() { }
@@ -21,8 +25,18 @@ public final class CuriosUtil {
      * 判断实体是否装备某一个饰品
      */
     public static boolean isEquipCurio(LivingEntity livingEntity, Item item) {
-        return CuriosApi.getCuriosInventory(livingEntity).resolve()
+        return CuriosApi.getCuriosInventory(livingEntity)
+                .resolve()
                 .map(iCuriosItemHandler -> iCuriosItemHandler.findFirstCurio(item).isPresent())
                 .orElse(false);
+    }
+
+
+    /**
+     * 获取实体装备的饰品，可能为空
+     */
+    public static @Nullable IItemHandlerModifiable getEquipCurios(LivingEntity livingEntity) {
+        val curiosInventory = CuriosApi.getCuriosInventory(livingEntity).resolve();
+        return curiosInventory.map(ICuriosItemHandler::getEquippedCurios).orElse(null);
     }
 }
