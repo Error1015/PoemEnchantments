@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.error1015.pe.PoemEnchantment;
 import org.error1015.pe.enchantment.ModEnchantments;
+import org.jetbrains.annotations.NotNull;
 
 public final class ModZhCnLanguageProvider extends LanguageProvider {
     private ModZhCnLanguageProvider(PackOutput output) {
@@ -12,7 +13,7 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
 
     public static ModZhCnLanguageProvider INSTANCE;
 
-    public static ModZhCnLanguageProvider getInstance(PackOutput output) {
+    public static @NotNull ModZhCnLanguageProvider getInstance(PackOutput output) {
         if (INSTANCE == null) {
             INSTANCE = new ModZhCnLanguageProvider(output);
         }

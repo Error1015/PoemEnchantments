@@ -4,7 +4,7 @@ import net.minecraft.world.item.Item;
 import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
-public class CuriosUtil {
+public final class CuriosUtil {
     private CuriosUtil() {}
     
     /**

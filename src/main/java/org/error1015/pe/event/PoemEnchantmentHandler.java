@@ -6,7 +6,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.error1015.pe.PoemEnchantment;
 import org.error1015.pe.enchantment.ModEnchantments;
-import org.error1015.pe.util.EnchantmentUtils;
+import org.error1015.pe.util.EnchantmentUtil;
 
 @Mod.EventBusSubscriber(modid = PoemEnchantment.MODID)
 public class PoemEnchantmentHandler {
@@ -19,7 +19,7 @@ public class PoemEnchantmentHandler {
         if (event.getEntity().level().isClientSide) return;
         val attacker = event.getSource().getEntity();
         if (attacker == null) return;
-        int level = EnchantmentUtils.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.REPLACE_BALANCE.get());
+        int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.REPLACE_BALANCE.get());
     }
 
     /**
@@ -31,6 +31,7 @@ public class PoemEnchantmentHandler {
         if (event.getEntity().level().isClientSide) return;
         val attacker = event.getSource().getEntity();
         if (attacker == null) return;
-        int level = EnchantmentUtils.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
+        int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
     }
+
 }

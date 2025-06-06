@@ -12,5 +12,5 @@ public class PEEffects {
 
     public static final RegistryObject<MobEffect> REPLACE_BALANCE_EFFECT = REGISTRAR.register("replace_balance_effect", ReplaceBalanceEffect::new);
 
-    private PEEffects() {}
+    private PEEffects() { }
 }

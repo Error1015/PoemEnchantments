@@ -20,5 +20,6 @@ public class GatherData {
         generator.addProvider(event.includeClient(), ModEnUsLanguageProvider.getInstance(output));
     }
 
-    private GatherData() {}
+    private GatherData() { }
+
 }
