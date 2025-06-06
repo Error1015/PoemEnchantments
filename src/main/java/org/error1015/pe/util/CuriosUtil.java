@@ -21,6 +21,8 @@ public final class CuriosUtil {
      * 判断实体是否装备某一个饰品
      */
     public static boolean isEquipCurio(LivingEntity livingEntity, Item item) {
-        return CuriosApi.getCuriosHelper().findEquippedCurio(item, livingEntity).isPresent();
+        return CuriosApi.getCuriosInventory(livingEntity).resolve()
+                .map(iCuriosItemHandler -> iCuriosItemHandler.findFirstCurio(item).isPresent())
+                .orElse(false);
     }
 }
