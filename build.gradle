@@ -10,9 +10,9 @@
 
 plugins {
     id 'idea'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
-    id("io.freefair.lombok") version "8.6"
+    id 'net.minecraftforge.gradle'
+    id 'org.parchmentmc.librarian.forgegradle'
+    id "io.freefair.lombok"
 }
 
 // apply plugin: 'org.spongepowered.mixin'
@@ -89,14 +89,28 @@ repositories {
         name = "Illusive Soulworks maven"
         url = "https://maven.theillusivec4.top/"
     }
+
+    maven {
+        name = "Curse Maven"
+        url = "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    compileOnly "org.projectlombok:lombok:1.18.38"
 
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_api_version}:api")
-    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${curios_api_version}"))
+    runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_api_version}")
+
+    runtimeOnly fg.deobf("curse.maven:jade-324717:6271651")
+    runtimeOnly fg.deobf("curse.maven:jei-238222:6600311")
+    runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:5855251")
+    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:5423987")
+
+    annotationProcessor "org.projectlombok:lombok:1.18.38"
 //    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }
@@ -119,7 +133,7 @@ tasks.named('jar', Jar).configure {
     manifest {
         attributes(["Specification-Title"     : mod_id,
                     "Specification-Vendor"    : mod_authors,
-                    "Specification-Version"   : "1", // We are version 1 of ourselves
+                    "Specification-Version"   : "1",
                     "Implementation-Title"    : project.name,
                     "Implementation-Version"  : project.jar.archiveVersion,
                     "Implementation-Vendor"   : mod_authors,

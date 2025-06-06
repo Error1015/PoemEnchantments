@@ -8,6 +8,12 @@ pluginManagement {
 
         maven { url = 'https://maven.parchmentmc.org' }
     }
+
+    plugins {
+        id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+        id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+        id "io.freefair.lombok" version "8.6"
+    }
 }
 
 rootProject.name = 'poem_enchantment-1-20-1'
