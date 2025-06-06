@@ -11,7 +11,7 @@ import org.error1015.pe.enchantment.ModEnchantments;
 import org.error1015.pe.util.EnchantmentUtil;
 
 @Mod.EventBusSubscriber(modid = PoemEnchantment.MODID)
-public class ArmorEnchantmentHandler {
+public final class ArmorEnchantmentHandler {
     /**
      * 置换天平：
      * 受到伤害或者攻击目标时，会交换自身和目标的所有属性值（比如生命值，生命恢复速度，攻击力，防御力，速度，暴击率，暴击伤害，攻击速度等），该效果持续5×附魔等级秒
@@ -45,6 +45,7 @@ public class ArmorEnchantmentHandler {
     @SubscribeEvent
     public static void doBoilingBloodEvent(LivingBreatheEvent event) {
         LivingEntity entity = event.getEntity();
+        if (entity == null || entity.level().isClientSide) return;
         // TODO
     }
 

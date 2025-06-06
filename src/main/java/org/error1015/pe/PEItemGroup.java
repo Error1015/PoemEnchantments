@@ -14,7 +14,9 @@ import org.error1015.pe.enchantment.ModEnchantments;
 
 import java.util.List;
 
-public class PEItemGroup {
+public final class PEItemGroup {
+    private PEItemGroup() { }
+
     public static final DeferredRegister<CreativeModeTab> REGISTRAR = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PoemEnchantment.MODID);
 
     /**

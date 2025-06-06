@@ -10,7 +10,7 @@ import org.error1015.pe.enchantment.ModEnchantments;
 import org.error1015.pe.util.EnchantmentUtil;
 
 @Mod.EventBusSubscriber
-public class WeaponEnchantmentHandler {
+public final class WeaponEnchantmentHandler {
     /**
      * 以理服人
      * 攻击生物时，有10%×附魔等级的概率，使目标生物失去对自身的仇恨。

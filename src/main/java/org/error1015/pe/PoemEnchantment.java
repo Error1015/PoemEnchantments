@@ -23,6 +23,6 @@ public class PoemEnchantment {
         PEEffects.REGISTRAR.register(modBus);
         PEItemGroup.REGISTRAR.register(modBus);
 
-        loadingContext.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        loadingContext.registerConfig(ModConfig.Type.COMMON, PEConfig.SPEC);
     }
 }

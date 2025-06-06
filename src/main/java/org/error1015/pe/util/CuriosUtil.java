@@ -33,7 +33,7 @@ public final class CuriosUtil {
 
 
     /**
-     * 获取实体装备的饰品，可能为空
+     * 获取实体装备的饰品
      */
     public static @Nullable IItemHandlerModifiable getEquipCurios(LivingEntity livingEntity) {
         val curiosInventory = CuriosApi.getCuriosInventory(livingEntity).resolve();

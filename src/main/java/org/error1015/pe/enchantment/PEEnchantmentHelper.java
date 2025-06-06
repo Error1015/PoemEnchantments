@@ -4,7 +4,9 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import org.error1015.pe.util.CuriosUtil;
 
-public class PEEnchantmentHelper {
+public final class PEEnchantmentHelper {
+    private PEEnchantmentHelper() {}
+
     public static final EquipmentSlot[] NOTHING = new EquipmentSlot[] {};
     public static final EquipmentSlot[] ARMORS = new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
     public static final EquipmentSlot[] HANDS = new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND };
