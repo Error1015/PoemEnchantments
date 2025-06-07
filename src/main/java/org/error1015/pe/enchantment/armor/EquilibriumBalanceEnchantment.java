@@ -1,10 +1,10 @@
 package org.error1015.pe.enchantment.armor;
 
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import org.error1015.pe.enchantment.PEBasicEnchantment;
 import org.error1015.pe.enchantment.PEEnchantmentHelper;
 
-public class EquilibriumBalanceEnchantment extends Enchantment {
+public class EquilibriumBalanceEnchantment extends PEBasicEnchantment {
     public EquilibriumBalanceEnchantment() {
         super(Rarity.UNCOMMON, EnchantmentCategory.ARMOR, PEEnchantmentHelper.ARMORS);
     }

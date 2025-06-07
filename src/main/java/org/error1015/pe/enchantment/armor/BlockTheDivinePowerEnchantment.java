@@ -1,10 +1,10 @@
 package org.error1015.pe.enchantment.armor;
 
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import org.error1015.pe.enchantment.PEBasicEnchantment;
 import org.error1015.pe.enchantment.PEEnchantmentHelper;
 
-public class BlockTheDivinePowerEnchantment extends Enchantment {
+public class BlockTheDivinePowerEnchantment extends PEBasicEnchantment {
     public BlockTheDivinePowerEnchantment() {
         super(Rarity.RARE, EnchantmentCategory.ARMOR, PEEnchantmentHelper.ARMORS);
     }

@@ -1,10 +1,10 @@
 package org.error1015.pe.enchantment.armor;
 
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import org.error1015.pe.enchantment.PEBasicEnchantment;
 import org.error1015.pe.enchantment.PEEnchantmentHelper;
 
-public class BoilingBloodEnchantment extends Enchantment {
+public class BoilingBloodEnchantment extends PEBasicEnchantment {
     public BoilingBloodEnchantment() {
         super(Rarity.COMMON, EnchantmentCategory.ARMOR, PEEnchantmentHelper.ARMORS);
     }
