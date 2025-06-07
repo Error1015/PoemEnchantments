@@ -1,18 +1,19 @@
 package org.error1015.pe.enchantment;
 
-import io.netty.util.internal.UnstableApi;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import org.error1015.pe.util.data.Lang;
 
 /**
  * 本模组的所有附魔都需要继承这个，负责重写相关公用逻辑
  */
-public class PEBasicEnchantment extends Enchantment {
+public abstract class PEBasicEnchantment extends Enchantment {
     public PEBasicEnchantment(Rarity pRarity, EnchantmentCategory pCategory, EquipmentSlot[] pApplicableSlots) {
         super(pRarity, pCategory, pApplicableSlots);
     }
 
+    public abstract String getDesc(Lang lang);
 
     /**
      * 根据附魔稀有度和等级计算附魔花费

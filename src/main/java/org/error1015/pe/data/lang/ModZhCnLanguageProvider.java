@@ -3,6 +3,8 @@ package org.error1015.pe.data.lang;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.error1015.pe.enchantment.ModEnchantments;
+import org.error1015.pe.util.data.EnchantmentDescGenerator;
+import org.error1015.pe.util.data.Lang;
 import org.jetbrains.annotations.NotNull;
 
 import static org.error1015.pe.PoemEnchantment.MODID;
@@ -25,6 +27,7 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
     public void addTranslations() {
         addKeys();
         addEnchantments();
+        addEnchantmentDesc();
     }
 
     private void addEnchantments() {
@@ -43,6 +46,13 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
         addEnchantment(ModEnchantments.SHARE_THE_BLESSINGS_AND_THE_DIFFICULTIES, "有福同享，有难同当");
         addEnchantment(ModEnchantments.NO_SHARE_THE_BLESSINGS_NO_AFFORD_DIFFICULTIES, "有福独享，有难不当");
         addEnchantment(ModEnchantments.UNSTAINED_FROM_MUD, "出淤泥而不染，濯清涟而不妖");
+    }
+
+    private void addEnchantmentDesc() {
+        var pairs = EnchantmentDescGenerator.genEnchantmentDesc(Lang.ZH_CN);
+        for (var pair : pairs) {
+            add(pair.getKey(), pair.getValue());
+        }
     }
 
     private void addKeys() {
