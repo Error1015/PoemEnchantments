@@ -8,6 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EnchantmentDescUtil {
+
+    /**
+     * 根据语言来返回不同的键值对列表，键是 enchantment.modid.enchantmentid.desc, 值从PEBasicEnchantment.getDesc(Lang)中取
+     * @param lang 语言类型
+     */
     public static @NotNull List<Pair<String, String>> genEnchantmentDesc(Lang lang) {
         var list = new ArrayList<Pair<String, String>>();
 
@@ -24,4 +29,5 @@ public class EnchantmentDescUtil {
 
         return list;
     }
+
 }
