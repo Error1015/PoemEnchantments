@@ -20,10 +20,6 @@ public final class EnchantmentUtil {
         return level;
     }
 
-    public static int getEnchantmentLevel(ItemStack stack, Enchantment enchantment) {
-        return stack.getAllEnchantments().getOrDefault(enchantment, 0);
-    }
-
     /**
      * 物品是否存在某一附魔
      */

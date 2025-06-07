@@ -8,8 +8,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.error1015.pe.enchantment.ModEnchantments;
 
-import static org.error1015.pe.util.EnchantmentUtil.getEnchantmentLevel;
-
 @Mod.EventBusSubscriber
 public final class WeaponEnchantmentHandler {
     /**
@@ -23,7 +21,7 @@ public final class WeaponEnchantmentHandler {
         val target = event.getEntity();
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
             val mainHandItem = attacker.getMainHandItem();
-            val level = getEnchantmentLevel(mainHandItem, ModEnchantments.REASONING.get());
+            val level = mainHandItem.getEnchantmentLevel(ModEnchantments.REASONING.get());
             if (level <= 0) return;
             val chance = level * 0.1f;
             if (target instanceof Mob mob && chance > Math.random()) {
