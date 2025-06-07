@@ -10,7 +10,9 @@ import org.error1015.pe.effect.PEEffects;
 import org.error1015.pe.enchantment.ModEnchantments;
 import org.slf4j.Logger;
 
-@Mod(PoemEnchantment.MODID)
+import static org.error1015.pe.PoemEnchantment.MODID;
+
+@Mod(MODID)
 public class PoemEnchantment {
     public static final String MODID = "poem_enchantment";
     public static final Logger LOGGER = LogUtils.getLogger();

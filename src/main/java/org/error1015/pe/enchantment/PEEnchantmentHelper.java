@@ -5,8 +5,6 @@ import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import org.error1015.pe.util.CuriosUtil;
 
 public final class PEEnchantmentHelper {
-    private PEEnchantmentHelper() {}
-
     public static final EquipmentSlot[] NOTHING = new EquipmentSlot[] {};
     public static final EquipmentSlot[] ARMORS = new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
     public static final EquipmentSlot[] HANDS = new EquipmentSlot[] { EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND };
@@ -18,4 +16,5 @@ public final class PEEnchantmentHelper {
     public static final EquipmentSlot[] FEET = new EquipmentSlot[] { EquipmentSlot.FEET };
     public static final EnchantmentCategory CURIOS = EnchantmentCategory.create("curios", CuriosUtil::isCurioItem);
     public static final EnchantmentCategory ANY = EnchantmentCategory.create("any", item -> true);
+    private PEEnchantmentHelper() { }
 }

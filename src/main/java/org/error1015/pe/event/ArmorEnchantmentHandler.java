@@ -6,11 +6,12 @@ import net.minecraftforge.event.entity.living.LivingBreatheEvent;
 import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.error1015.pe.PoemEnchantment;
 import org.error1015.pe.enchantment.ModEnchantments;
-import org.error1015.pe.util.EnchantmentUtil;
 
-@Mod.EventBusSubscriber(modid = PoemEnchantment.MODID)
+import static org.error1015.pe.PoemEnchantment.MODID;
+import static org.error1015.pe.util.EnchantmentUtil.getArmorsEnchantmentsMaxLevel;
+
+@Mod.EventBusSubscriber(modid = MODID)
 public final class ArmorEnchantmentHandler {
     /**
      * 置换天平：
@@ -21,7 +22,7 @@ public final class ArmorEnchantmentHandler {
         if (event.getEntity().level().isClientSide) return;
         val attacker = event.getSource().getEntity();
         if (attacker == null) return;
-        int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.REPLACE_BALANCE.get());
+        int level = getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.REPLACE_BALANCE.get());
         // TODO
     }
 
@@ -33,7 +34,7 @@ public final class ArmorEnchantmentHandler {
     public static void doEquilibriumBalanceEvent(LivingDamageEvent event) {
         if (event.getEntity().level().isClientSide) return;
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
-            int level = EnchantmentUtil.getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
+            int level = getArmorsEnchantmentsMaxLevel(attacker, ModEnchantments.EQUILIBRIUM_BALANCE.get());
             // TODO
         }
     }
@@ -45,7 +46,7 @@ public final class ArmorEnchantmentHandler {
     @SubscribeEvent
     public static void doBoilingBloodEvent(LivingBreatheEvent event) {
         LivingEntity entity = event.getEntity();
-        if (entity == null || entity.level().isClientSide) return;
+        if (entity == null || entity.level().isClientSide) { }
         // TODO
     }
 

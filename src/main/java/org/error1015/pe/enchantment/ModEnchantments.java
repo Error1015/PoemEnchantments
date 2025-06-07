@@ -4,14 +4,13 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.error1015.pe.PoemEnchantment;
 import org.error1015.pe.enchantment.armor.*;
 import org.error1015.pe.enchantment.weapon.*;
 
-public final class ModEnchantments {
-    private ModEnchantments() { }
+import static org.error1015.pe.PoemEnchantment.MODID;
 
-    public static final DeferredRegister<Enchantment> REGISTRAR = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, PoemEnchantment.MODID);
+public final class ModEnchantments {
+    public static final DeferredRegister<Enchantment> REGISTRAR = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
     public static final RegistryObject<Enchantment> REPLACE_BALANCE = REGISTRAR.register("replace_balance", ReplaceBalanceEnchantment::new);
     public static final RegistryObject<Enchantment> EQUILIBRIUM_BALANCE = REGISTRAR.register("equilibrium_balance", EquilibriumBalanceEnchantment::new);
     public static final RegistryObject<Enchantment> VICTORY_BALANCE = REGISTRAR.register("victory_balance", VictoryBalanceEnchantment::new);
@@ -27,4 +26,5 @@ public final class ModEnchantments {
     public static final RegistryObject<Enchantment> SHARE_THE_BLESSINGS_AND_THE_DIFFICULTIES = REGISTRAR.register("share_the_blessings_and_the_difficulties", ShareTheBlessingsAndTheDifficultiesEnchantment::new);
     public static final RegistryObject<Enchantment> NO_SHARE_THE_BLESSINGS_NO_AFFORD_DIFFICULTIES = REGISTRAR.register("no_share_the_blessings_no_afford_difficulties", NoShareTheBlessingsNoAffordDifficultiesEnchantment::new);
     public static final RegistryObject<Enchantment> UNSTAINED_FROM_MUD = REGISTRAR.register("unstained_from_mud", UnstainedFromMudEnchantment::new);
+    private ModEnchantments() { }
 }

@@ -10,6 +10,8 @@ import org.error1015.pe.data.lang.ModZhCnLanguageProvider;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class GatherData {
 
+    private GatherData() { }
+
     @SubscribeEvent
     public static void gatherData(final GatherDataEvent event) {
         val generator = event.getGenerator();
@@ -19,7 +21,4 @@ public class GatherData {
         generator.addProvider(event.includeClient(), ModZhCnLanguageProvider.getInstance(output));
         generator.addProvider(event.includeClient(), ModEnUsLanguageProvider.getInstance(output));
     }
-
-    private GatherData() { }
-
 }
