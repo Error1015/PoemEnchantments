@@ -1,6 +1,5 @@
 package org.error1015.pe;
 
-import lombok.experimental.UtilityClass;
 import lombok.val;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -17,7 +16,6 @@ import java.util.List;
 
 import static org.error1015.pe.PoemEnchantment.MODID;
 
-@UtilityClass
 public final class PEItemGroup {
     public static final DeferredRegister<CreativeModeTab> REGISTRAR = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     public static final RegistryObject<CreativeModeTab> MOD_ITEM_GROUP = REGISTRAR.register("pe_enchantments_group", () -> CreativeModeTab.builder()

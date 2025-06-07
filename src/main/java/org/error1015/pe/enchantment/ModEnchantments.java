@@ -1,6 +1,5 @@
 package org.error1015.pe.enchantment;
 
-import lombok.experimental.UtilityClass;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -10,7 +9,6 @@ import org.error1015.pe.enchantment.weapon.*;
 
 import static org.error1015.pe.PoemEnchantment.MODID;
 
-@UtilityClass
 public final class ModEnchantments {
     public static final DeferredRegister<Enchantment> REGISTRAR = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
     public static final RegistryObject<Enchantment> REPLACE_BALANCE = REGISTRAR.register("replace_balance", ReplaceBalanceEnchantment::new);

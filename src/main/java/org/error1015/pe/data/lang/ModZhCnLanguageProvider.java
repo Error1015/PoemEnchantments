@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import static org.error1015.pe.PoemEnchantment.MODID;
 
 public final class ModZhCnLanguageProvider extends LanguageProvider {
-    public static ModZhCnLanguageProvider INSTANCE;
+    private static ModZhCnLanguageProvider INSTANCE;
 
     private ModZhCnLanguageProvider(PackOutput output) {
         super(output, MODID, "zh_cn");

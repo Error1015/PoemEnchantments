@@ -1,11 +1,9 @@
 package org.error1015.pe.enchantment;
 
-import lombok.experimental.UtilityClass;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import org.error1015.pe.util.CuriosUtil;
 
-@UtilityClass
 public final class PEEnchantmentHelper {
     public static final EquipmentSlot[] NOTHING = new EquipmentSlot[] {};
     public static final EquipmentSlot[] ARMORS = new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET };
