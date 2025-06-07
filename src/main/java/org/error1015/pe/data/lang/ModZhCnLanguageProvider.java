@@ -3,7 +3,7 @@ package org.error1015.pe.data.lang;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.error1015.pe.enchantment.ModEnchantments;
-import org.error1015.pe.util.data.EnchantmentDescGenerator;
+import org.error1015.pe.util.data.EnchantmentDescUtil;
 import org.error1015.pe.util.data.Lang;
 import org.jetbrains.annotations.NotNull;
 
@@ -49,7 +49,7 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
     }
 
     private void addEnchantmentDesc() {
-        var pairs = EnchantmentDescGenerator.genEnchantmentDesc(Lang.ZH_CN);
+        var pairs = EnchantmentDescUtil.genEnchantmentDesc(Lang.ZH_CN);
         for (var pair : pairs) {
             add(pair.getKey(), pair.getValue());
         }

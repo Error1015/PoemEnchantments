@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EnchantmentDescGenerator {
+public class EnchantmentDescUtil {
     public static @NotNull List<Pair<String, String>> genEnchantmentDesc(Lang lang) {
         var list = new ArrayList<Pair<String, String>>();
 
