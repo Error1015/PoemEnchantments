@@ -18,10 +18,11 @@ import static org.error1015.pe.PoemEnchantment.MODID;
 
 public final class PEItemGroup {
     public static final DeferredRegister<CreativeModeTab> REGISTRAR = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
+
     public static final RegistryObject<CreativeModeTab> MOD_ITEM_GROUP = REGISTRAR.register("pe_enchantments_group", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + MODID))
             .icon(Items.ENCHANTED_BOOK::getDefaultInstance)
-            .displayItems((parm, output) -> output.acceptAll(getEnchantments()))
+            .displayItems((parm, output) -> output.acceptAll(genEnchantmentsBookItem()))
             .build());
 
 
@@ -29,7 +30,7 @@ public final class PEItemGroup {
      * 返回ModEnchantments注册表中的附魔，并创建附魔书实例，返回附魔书列表。
      * 注意：不要将其定义为静态字段，否则将会在注册附魔时获取实例抛出异常
      */
-    private static List<ItemStack> getEnchantments() {
+    private static List<ItemStack> genEnchantmentsBookItem() {
         return ModEnchantments.REGISTRAR.getEntries().stream().map(it -> {
             val enchantment = it.get();
             return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantment, enchantment.getMaxLevel()));
