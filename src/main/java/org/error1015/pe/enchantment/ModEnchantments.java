@@ -1,5 +1,6 @@
 package org.error1015.pe.enchantment;
 
+import lombok.experimental.UtilityClass;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -9,6 +10,7 @@ import org.error1015.pe.enchantment.weapon.*;
 
 import static org.error1015.pe.PoemEnchantment.MODID;
 
+@UtilityClass
 public final class ModEnchantments {
     public static final DeferredRegister<Enchantment> REGISTRAR = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
     public static final RegistryObject<Enchantment> REPLACE_BALANCE = REGISTRAR.register("replace_balance", ReplaceBalanceEnchantment::new);
@@ -26,5 +28,4 @@ public final class ModEnchantments {
     public static final RegistryObject<Enchantment> SHARE_THE_BLESSINGS_AND_THE_DIFFICULTIES = REGISTRAR.register("share_the_blessings_and_the_difficulties", ShareTheBlessingsAndTheDifficultiesEnchantment::new);
     public static final RegistryObject<Enchantment> NO_SHARE_THE_BLESSINGS_NO_AFFORD_DIFFICULTIES = REGISTRAR.register("no_share_the_blessings_no_afford_difficulties", NoShareTheBlessingsNoAffordDifficultiesEnchantment::new);
     public static final RegistryObject<Enchantment> UNSTAINED_FROM_MUD = REGISTRAR.register("unstained_from_mud", UnstainedFromMudEnchantment::new);
-    private ModEnchantments() { }
 }
