@@ -10,12 +10,15 @@ import java.util.List;
 
 public class EnchantmentDescUtil {
 
+    public static final List<Pair<String, String>> ZH_CN_DESC = genEnchantmentDesc(Lang.ZH_CN);
+    public static final List<Pair<String, String>> EN_US_DESC = genEnchantmentDesc(Lang.EN_US);
+
     /**
      * 根据语言来返回不同的键值对列表，键是 enchantment.modid.enchantmentid.desc, 值从PEBasicEnchantment.getDesc(Lang)中取
      *
      * @param lang 语言类型
      */
-    public static @NotNull List<Pair<String, String>> genEnchantmentDesc(Lang lang) {
+    private static @NotNull List<Pair<String, String>> genEnchantmentDesc(Lang lang) {
         val list = new ArrayList<Pair<String, String>>();
         // 遍历注册表拿到RegisterObject<Enchantment>
         for (var entry : ModEnchantments.REGISTRAR.getEntries()) {
