@@ -1,9 +1,12 @@
 package org.error1015.pe.enchantment;
 
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import org.error1015.pe.util.data.Lang;
+
+import java.util.Set;
 
 /**
  * 本模组的所有附魔都需要继承这个，负责重写相关公用逻辑
@@ -17,6 +20,7 @@ public abstract class PEBasicEnchantment extends Enchantment {
 
     /**
      * 根据附魔稀有度和等级计算附魔花费
+     * TODO: 数值未定
      * @param level 附魔等级
      * @return 附魔花费
      */
@@ -32,6 +36,7 @@ public abstract class PEBasicEnchantment extends Enchantment {
 
     /**
      * 根据附魔稀有度和等级计算附魔花费
+     * TODO: 数值未定
      * @param level 附魔等级
      * @return 附魔花费
      */
@@ -43,5 +48,15 @@ public abstract class PEBasicEnchantment extends Enchantment {
             case RARE -> level * 3;
             case VERY_RARE -> level * 4;
         };
+    }
+
+    /**
+     * 防止附魔书被重复添加到不同的创造模式标签页中
+     * @param book the item being added to the creative tab
+     * @param allowedCategories the enchantment categories allowed in the creative tab
+     */
+    @Override
+    public boolean allowedInCreativeTab(Item book, Set<EnchantmentCategory> allowedCategories) {
+        return false;
     }
 }

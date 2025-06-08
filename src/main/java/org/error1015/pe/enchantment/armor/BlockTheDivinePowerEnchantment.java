@@ -16,11 +16,10 @@ public class BlockTheDivinePowerEnchantment extends PEBasicEnchantment {
     }
 
     @Override
-    public  String getDesc(Lang lang) {
+    public String getDesc(Lang lang) {
         return switch (lang) {
             case EN_US -> "";
             case ZH_CN -> "";
         };
     }
-
 }
