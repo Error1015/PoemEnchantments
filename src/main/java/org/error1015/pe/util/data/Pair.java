@@ -30,7 +30,7 @@ public class Pair<K, V> {
     public static <K, V> @NotNull Map<K, V> mapOf(@NotNull Pair<K, V>... pairs) {
         var map = new HashMap<K, V>();
 
-        for (Pair<K, V> pair : pairs) {
+        for (var pair : pairs) {
             map.put(pair.getKey(), pair.value);
         }
 
@@ -48,7 +48,7 @@ public class Pair<K, V> {
      */
     @SafeVarargs
     public static <K, V> @NotNull Map<K, V> putMap(@NotNull Map<K, V> map, @NotNull Pair<K, V>... pairs) {
-        for (Pair<K, V> pair : pairs) {
+        for (var pair : pairs) {
             map.put(pair.key, pair.value);
         }
         return map;

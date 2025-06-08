@@ -36,5 +36,4 @@ public final class PEItemGroup {
             return EnchantedBookItem.createForEnchantment(new EnchantmentInstance(enchantment, enchantment.getMaxLevel()));
         }).toList();
     }
-
 }
