@@ -1,5 +1,6 @@
 package org.error1015.pe.util.data;
 
+import lombok.val;
 import org.error1015.pe.enchantment.ModEnchantments;
 import org.error1015.pe.enchantment.PEBasicEnchantment;
 import org.jetbrains.annotations.NotNull;
