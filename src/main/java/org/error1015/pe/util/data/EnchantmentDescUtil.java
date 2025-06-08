@@ -16,7 +16,7 @@ public class EnchantmentDescUtil {
      */
     public static @NotNull List<Pair<String, String>> genEnchantmentDesc(Lang lang) {
         var list = new ArrayList<Pair<String, String>>();
-
+        // 遍历注册表拿到RegisterObject<Enchantment>
         for (var entry : ModEnchantments.REGISTRAR.getEntries()) {
             if (entry != null && entry.get() instanceof PEBasicEnchantment enchantment) {
                 var descPath = enchantment.getDescriptionId() + ".desc";
