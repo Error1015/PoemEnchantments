@@ -3,9 +3,7 @@ package org.error1015.pe.data.lang;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import org.error1015.pe.enchantment.ModEnchantments;
-import org.error1015.pe.util.EnchantmentUtil;
 import org.error1015.pe.util.data.EnchantmentDescUtil;
-import org.error1015.pe.util.data.Lang;
 import org.jetbrains.annotations.NotNull;
 
 import static org.error1015.pe.PoemEnchantment.MODID;
