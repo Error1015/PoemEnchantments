@@ -18,7 +18,7 @@ public class EnchantmentDescUtil {
 
         for (var entry : ModEnchantments.REGISTRAR.getEntries()) {
             if (entry != null && entry.get() instanceof PEBasicEnchantment enchantment) {
-                var descPath = entry.get().getDescriptionId() + ".desc";
+                var descPath = enchantment.getDescriptionId() + ".desc";
 
                 switch (lang) {
                     case EN_US -> list.add(Pair.of(descPath, enchantment.getDesc(Lang.EN_US)));
