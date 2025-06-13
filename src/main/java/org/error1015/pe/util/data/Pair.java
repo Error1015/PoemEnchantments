@@ -1,22 +1,21 @@
 package org.error1015.pe.util.data;
 
-import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @Getter
 @Setter
-@FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor(staticName = "of")
 public class Pair<K, V> {
-    K key;
-    V value;
+    private K key;
+    private V value;
 
     /**
      * 通过pair构建map
