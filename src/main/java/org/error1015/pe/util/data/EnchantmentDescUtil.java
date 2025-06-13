@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EnchantmentDescUtil {
+public final class EnchantmentDescUtil {
 
     public static final List<Pair<String, String>> ZH_CN_DESC = genEnchantmentDesc(Lang.ZH_CN);
     public static final List<Pair<String, String>> EN_US_DESC = genEnchantmentDesc(Lang.EN_US);
@@ -29,6 +29,10 @@ public class EnchantmentDescUtil {
         }
 
         return list;
+    }
+
+    private EnchantmentDescUtil() {
+        throw new IllegalArgumentException("Utility class created Instance.");
     }
 
 }
