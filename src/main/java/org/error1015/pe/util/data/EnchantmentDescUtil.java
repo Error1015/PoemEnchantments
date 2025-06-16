@@ -34,5 +34,4 @@ public final class EnchantmentDescUtil {
     private EnchantmentDescUtil() {
         throw new IllegalArgumentException("Utility class created Instance.");
     }
-
 }
