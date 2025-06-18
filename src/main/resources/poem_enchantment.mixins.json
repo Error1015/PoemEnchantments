@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.error1015.mixin",
+  "package": "org.error1015.pe.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "poem_enchantment.refmap.json",
   "mixins": [

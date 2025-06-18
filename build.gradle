@@ -1,4 +1,4 @@
-/*buildscript {
+buildscript {
     repositories {
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
@@ -6,7 +6,7 @@
     dependencies {
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
-}*/
+}
 
 plugins {
     id 'idea'
@@ -15,7 +15,7 @@ plugins {
     id "io.freefair.lombok"
 }
 
-// apply plugin: 'org.spongepowered.mixin'
+ apply plugin: 'org.spongepowered.mixin'
 
 group = mod_group_id
 version = mod_version
@@ -74,10 +74,10 @@ minecraft {
     }
 }
 
-// mixin {
-//     add sourceSets.main, "${mod_id}.refmap.json"
-//     config "${mod_id}.mixins.json"
-// }
+ mixin {
+     add sourceSets.main, "${mod_id}.refmap.json"
+     config "${mod_id}.mixins.json"
+ }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
@@ -111,7 +111,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:bookshelf-228525:5423987")
 
     annotationProcessor "org.projectlombok:lombok:1.18.38"
-//    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
 }
 
