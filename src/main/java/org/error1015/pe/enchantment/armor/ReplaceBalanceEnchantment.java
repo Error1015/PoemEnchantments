@@ -22,5 +22,4 @@ public class ReplaceBalanceEnchantment extends PEBasicEnchantment {
             case ZH_CN -> "受伤时, 与攻击者交换属性值, 持续一段时间";
         };
     }
-
 }
