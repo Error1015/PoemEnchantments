@@ -18,8 +18,8 @@ public class CalmlyEnchantment extends PEBasicEnchantment {
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Has a chance to cause the target to lose hatred of all creatures";
+            case ZH_CN -> "有概率使目标失去对所有生物的仇恨";
         };
     }
 

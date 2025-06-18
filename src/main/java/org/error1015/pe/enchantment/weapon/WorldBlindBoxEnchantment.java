@@ -7,7 +7,7 @@ import org.error1015.pe.util.data.Lang;
 
 public class WorldBlindBoxEnchantment extends PEBasicEnchantment {
     public WorldBlindBoxEnchantment() {
-        super(Rarity.RARE, EnchantmentCategory.WEAPON, PEEnchantmentHelper.MAIN_HAND);
+        super(Rarity.VERY_RARE, EnchantmentCategory.WEAPON, PEEnchantmentHelper.MAIN_HAND);
     }
 
     @Override
@@ -18,8 +18,8 @@ public class WorldBlindBoxEnchantment extends PEBasicEnchantment {
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Has a chance to cause the target to drop any item";
+            case ZH_CN -> "有概率使目标掉落一件任意物品";
         };
     }
 

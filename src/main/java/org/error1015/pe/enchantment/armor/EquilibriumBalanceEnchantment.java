@@ -18,8 +18,8 @@ public class EquilibriumBalanceEnchantment extends PEBasicEnchantment {
     @Override
     public String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "When injured, the stat value is evenly distributed for a certain amount of time";
+            case ZH_CN -> "受伤时把属性值平均分配, 持续一定时间";
         };
     }
 

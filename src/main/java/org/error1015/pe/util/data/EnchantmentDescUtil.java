@@ -27,7 +27,6 @@ public final class EnchantmentDescUtil {
                 list.add(Pair.of(descPath, enchantment.getDesc(lang)));
             }
         }
-
         return list;
     }
 

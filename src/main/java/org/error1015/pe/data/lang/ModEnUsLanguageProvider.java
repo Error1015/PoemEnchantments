@@ -39,7 +39,6 @@ public final class ModEnUsLanguageProvider extends LanguageProvider {
         addEnchantment(ModEnchantments.BE_COMPASSIONATE, "Be Compassionate");
         addEnchantment(ModEnchantments.BOILING_BLOOD, "Boiling Blood");
         addEnchantment(ModEnchantments.BLOCK_THE_DIVINE_POWER, "Block The Divine Power");
-        addEnchantment(ModEnchantments.DROPPING_BLIND_BOX, "Dropping Blind Box");
         addEnchantment(ModEnchantments.LOOTING_BLIND_BOX, "Looting Blind Box");
         addEnchantment(ModEnchantments.WORLD_BLIND_BOX, "World Blind Box");
         addEnchantment(ModEnchantments.SHARE_THE_BLESSINGS_AND_THE_DIFFICULTIES, "Share The Blessings And The Difficulties");

@@ -18,9 +18,8 @@ public class ShareTheBlessingsAndTheDifficultiesEnchantment extends PEBasicEncha
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Share the health regeneration effect with nearby entities";
+            case ZH_CN -> "把身上的生命恢复效果分享给周围的实体";
         };
     }
-
 }

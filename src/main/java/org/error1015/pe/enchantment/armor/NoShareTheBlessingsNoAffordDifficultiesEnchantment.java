@@ -18,8 +18,8 @@ public class NoShareTheBlessingsNoAffordDifficultiesEnchantment extends PEBasicE
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "The health regeneration effect on entities within a certain radius will stack on you";
+            case ZH_CN -> "一定范围内实体身上的生命恢复效果都会叠加给你";
         };
     }
 

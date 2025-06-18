@@ -18,8 +18,8 @@ public class SageMomentEnchantment extends PEBasicEnchantment {
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Probability causes the target to lose all actions except movement for a period of time";
+            case ZH_CN -> "概率使目标失去除了移动之外的所有行为, 持续一段时间";
         };
     }
 

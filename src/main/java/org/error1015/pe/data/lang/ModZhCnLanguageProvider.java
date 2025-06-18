@@ -39,7 +39,6 @@ public final class ModZhCnLanguageProvider extends LanguageProvider {
         addEnchantment(ModEnchantments.BE_COMPASSIONATE, "慈悲为怀");
         addEnchantment(ModEnchantments.BOILING_BLOOD, "沸腾之血");
         addEnchantment(ModEnchantments.BLOCK_THE_DIVINE_POWER, "格挡神力");
-        addEnchantment(ModEnchantments.DROPPING_BLIND_BOX, "掉落物盲盒");
         addEnchantment(ModEnchantments.LOOTING_BLIND_BOX, "战利品盲盒");
         addEnchantment(ModEnchantments.WORLD_BLIND_BOX, "世界盲盒");
         addEnchantment(ModEnchantments.SHARE_THE_BLESSINGS_AND_THE_DIFFICULTIES, "有福同享，有难同当");

@@ -18,8 +18,8 @@ public class ReplaceBalanceEnchantment extends PEBasicEnchantment {
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "When injured, swap attribute values with the attacker for a period of time";
+            case ZH_CN -> "受伤时, 与攻击者交换属性值, 持续一段时间";
         };
     }
 

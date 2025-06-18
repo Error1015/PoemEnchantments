@@ -16,10 +16,10 @@ public class BoilingBloodEnchantment extends PEBasicEnchantment {
     }
 
     @Override
-    public  String getDesc(Lang lang) {
+    public String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Increases health regeneration";
+            case ZH_CN -> "加强生命恢复效果";
         };
     }
 

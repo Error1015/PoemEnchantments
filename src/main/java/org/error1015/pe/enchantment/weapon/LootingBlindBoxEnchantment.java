@@ -18,8 +18,8 @@ public class LootingBlindBoxEnchantment extends PEBasicEnchantment {
     @Override
     public  String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Has a chance to drop the target's drops directly";
+            case ZH_CN -> "有概率直接掉落目标的掉落物";
         };
     }
 

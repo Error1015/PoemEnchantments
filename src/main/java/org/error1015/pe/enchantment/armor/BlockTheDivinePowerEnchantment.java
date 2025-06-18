@@ -18,8 +18,8 @@ public class BlockTheDivinePowerEnchantment extends PEBasicEnchantment {
     @Override
     public String getDesc(Lang lang) {
         return switch (lang) {
-            case EN_US -> "";
-            case ZH_CN -> "";
+            case EN_US -> "Offset a certain amount of damage";
+            case ZH_CN -> "抵消一定伤害";
         };
     }
 }
